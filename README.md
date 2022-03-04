@@ -3,11 +3,11 @@
 <h2 align="center">Projeto criado para estudo de node  js e mongo DB . </h2>
 <h1>🚀 Features</h1>
 <ul>
-    <li> Cria uma url que passa por um Domínio especifico antes de ser direcionado para a própia
-      <li>Cria um id específico para cada link
-        <li> ao apertar o botão delete exclui a card  no backend e  no frontend 
-          <li>Verifica o titulo e a url se estão vazios se estiverem ele não adiociona o post
-            <li>Verifica e adiciona quantos Clicks teve no link
+    <li> Cria uma url que passa por um Domínio especifico antes de ser direcionado para a própia.
+      <li>Cria um id específico para cada link.
+        <li> ao apertar o botão delete exclui a card  no backend e  no frontend .
+          <li>Verifica o titulo e a url se estão vazios se estiverem ele não adiociona o post.
+            <li>Verifica e adiciona quantos Clicks teve no link.
 <h1>🚀 Tecnologias</h1>
  
  <ul>
