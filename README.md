@@ -1,6 +1,6 @@
 
-<h1 align="center" >Mural para Datas , projetos e etc<h1>
-<h2 align="center">Projeto criado para estudo de Api Rest e Backend em geral . </h2>
+<h1 align="center" >Redirecionador de links<h1>
+<h2 align="center">Projeto criado para estudo de node  js e mongo DB . </h2>
 <h1>🚀 Features</h1>
 <ul>
     <li> Cria uma url que passa por um Domínio especifico antes de ser direcionado para a própia
