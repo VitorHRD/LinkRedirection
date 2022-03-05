@@ -9,14 +9,14 @@ const redirect = async (req , res)=>{
         res.redirect(doc.url);
     }
     }catch(error){
-       res.send(error)
+       res.send(error);
     }
     }
     const addLink = async (req,res)=>{
         let link = new Link(req.body)
         try{
-            let doc = await link.save()
-            res.redirect('/')
+            let doc = await link.save();
+            res.redirect('/');
         }catch(error){
             res.render('add', {error, body:req.body});
         }
@@ -24,10 +24,10 @@ const redirect = async (req , res)=>{
     const allLinks = async (req ,res) =>{
         try{
             let links = await Link.find({});
-            res.render('all',{links})
+            res.render('all',{links});
         }
         catch(error){
-            res.send(error)
+            res.send(error);
         }
     }
     const deleteLink = async (req,res)=>{
@@ -51,27 +51,28 @@ const redirect = async (req , res)=>{
     }
     const editLink = async (req,res)=>{
         let id = req.params.id;
-        let link = {}
+        let link = {};
         link.title = req.body.title;
         link.description = req.body.description;
         link.url = req.body.url;
         try{
-            let doc = await Link.updateOne({_id: id }, link)
-            res.redirect('/')
+            let doc = await Link.updateOne({_id: id }, link);
+            res.redirect('/');
         }catch(error){
-            console.log(error.messag)
+            console.log(error.message);
             res.render('edit', {error, body:req.body});
         }
     }
       const searchLink = async(req , res) =>{
-          let value = req.params.value
+          let value = req.params.value;
+          let values = "^"+ value;
           try{
-              let links = await Link.find({"title": new RegExp(value)},)
+              let links = await Link.find({"title": new RegExp( values ,"i"),})
               res.render('all.ejs',{links})
           }
           catch(error){
-             console.log(error.message)
-             res.send(error.message)
+             console.log(error.message);
+             res.send(error.message);
           }
       }
     
