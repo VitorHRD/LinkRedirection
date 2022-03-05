@@ -59,10 +59,22 @@ const redirect = async (req , res)=>{
             let doc = await Link.updateOne({_id: id }, link)
             res.redirect('/')
         }catch(error){
-            console.log(error.message)
+            console.log(error.messag)
             res.render('edit', {error, body:req.body});
         }
     }
+      const searchLink = async(req , res) =>{
+          let value = req.params.value
+          try{
+              let links = await Link.find({"title": new RegExp(value)},)
+              res.render('all.ejs',{links})
+          }
+          catch(error){
+             console.log(error.message)
+             res.send(error.message)
+          }
+      }
+    
 
 
-    module.exports = {redirect , addLink , allLinks,deleteLink , loadLink , editLink}
+    module.exports = {redirect , addLink , allLinks,deleteLink , loadLink , editLink, searchLink}
