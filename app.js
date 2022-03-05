@@ -7,7 +7,7 @@ const path = require('path');
 
 
 app.use('/',LinkRoute);
-app.use('/', express.static(path.join(__dirname, 'public')));
+app.use('/', express.static('templates'));
 
 mongoose.connect("mongodb://localhost/newlinks",  (error , db)=>{
     if(error){

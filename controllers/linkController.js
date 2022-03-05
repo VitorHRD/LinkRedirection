@@ -66,9 +66,12 @@ const redirect = async (req , res)=>{
       const searchLink = async(req , res) =>{
           let value = req.params.value;
           let values = "^"+ value;
+
           try{
+
               let links = await Link.find({"title": new RegExp( values ,"i"),})
-              res.render('all.ejs',{links})
+
+                res.render('all.ejs',{links})
           }
           catch(error){
              console.log(error.message);

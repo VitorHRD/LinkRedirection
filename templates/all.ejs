@@ -105,9 +105,11 @@
             let search = document.getElementById('search');
             let value = search.value;
             fetch('/search/' + value, { method: 'GET' }).then(res =>{
-                if (res.status == 200) {
+                if (res.text() != "link não encontrado") {
                     window.location.href = "http://localhost:3000/search/" + value
-                    
+            }
+            else{
+                alert("link não encontrado")
             }
         })
     }
