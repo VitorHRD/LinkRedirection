@@ -5,9 +5,9 @@ const mongoose = require('mongoose');
 const LinkRoute = require('./routes/linkRoute');
 const path = require('path');
 
-
+app.use('/', express.static(path.join(__dirname,'public')))
 app.use('/',LinkRoute);
-app.use('/', express.static('templates'));
+
 
 mongoose.connect("mongodb://localhost/newlinks",  (error , db)=>{
     if(error){
