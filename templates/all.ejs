@@ -45,7 +45,7 @@
         <div class="w100">
 
             <input id="search" class=" inputS" name="search" type="text">
-            <button id="botao" class="btn" onclick="aa()">🔍</button>
+            <button id="botao" class="btn" onclick="search()">🔍</button>
 
         </div>
         <% for(let i=0 ; i< links.length ; i++){ %>
@@ -101,16 +101,11 @@
                 }
             })
         }
-        function aa() {
+        function search() {
             let search = document.getElementById('search');
             let value = search.value;
             fetch('/search/' + value, { method: 'GET' }).then(res =>{
-                if (res.text() != "link não encontrado") {
                     window.location.href = "http://localhost:3000/search/" + value
-            }
-            else{
-                alert("link não encontrado")
-            }
         })
     }
         

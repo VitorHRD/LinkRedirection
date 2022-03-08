@@ -70,8 +70,12 @@ const redirect = async (req , res)=>{
           try{
 
               let links = await Link.find({"title": new RegExp( values ,"i"),})
-
+              if (links != ""){
                 res.render('all.ejs',{links})
+            }
+            else{
+                res.render('error',{value})
+            }
           }
           catch(error){
              console.log(error.message);
