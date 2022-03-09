@@ -9,7 +9,7 @@
           <li>Verifica o titulo e a url se estão vazios se estiverem ele não adiociona o post.
             <li>Verifica e adiciona quantos Clicks teve no link.
              <li>Possui um input  que busca o  Titulo do Link com a letra selecionada e deixa somente o própio na tela.
-              <li>Pussui filtros de clicks e de data . 
+              <li>Pussui filtros de numero de clicks e de data de postagem . 
 <h1>🚀 Tecnologias</h1>
  
  <ul>
