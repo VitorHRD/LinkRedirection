@@ -22,9 +22,23 @@ const redirect = async (req , res)=>{
         }
     }
     const allLinks = async (req ,res) =>{
+        let value = ""
         try{
             let links = await Link.find({});
+            links.sort((a,b)=>{
+                if(a > b){
+                    return -1;
+                }
+                else{
+                    return true
+                }
+            })
+            if(links != ""){
             res.render('all',{links});
+        }
+        else{
+            res.render('error',{value})
+        }
         }
         catch(error){
             res.send(error);
@@ -82,7 +96,31 @@ const redirect = async (req , res)=>{
              res.send(error.message);
           }
       }
-    
+      const clickRedirect = async(req,res) =>{
+          let value = ""
+        try{
+            let links = await Link.find({});
+
+            
+            links.sort((a,b)=>{
+                if(a.click > b.click){
+                    return -1;
+                }
+                else{
+                    return true
+                }
+            })
+        
+            if(links != ""){
+            res.render('click',{links});
+        }
+        else{
+            res.render('error',{value})
+        }
+      }catch(error){
+          console.log(error)
+      }
+      }
 
 
-    module.exports = {redirect , addLink , allLinks,deleteLink , loadLink , editLink, searchLink}
+    module.exports = {redirect , addLink , allLinks,deleteLink , loadLink , editLink, searchLink,clickRedirect}
