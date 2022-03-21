@@ -40,7 +40,7 @@
 <body>
 
     <div class="container">
-        <h1><a href="/" class="text-dark text-decoration-none"  >Links</a></h1>
+        <h1><a href="/" class="text-dark text-decoration-none">Links</a></h1>
         <a class="text-decoration-none d-block  " href="/add">Add Link</a>
         <div class="w100">
 
@@ -50,25 +50,27 @@
         </div>
         <div>
             <div>
-                <h1 class="text-center mt-4"> 
+                <h1 class="text-center mt-4">
                     link not found
                 </h1>
             </div>
             <div class="text-center mt-3">
-               <a href="/add"><button class="btn btn-primary pt-2 pb-2">Add link</button></a>
-               <a href="https://www.youtube.com/results?search_query=<%=value%>"><button class="btn btn-primary pt-2 pb-2">Search on youtube</button></a>
-                <a href="https://www.google.com/search?q=<%=value%>"><button class="btn btn-primary pt-2 pb-2">Search on google</button></a>
+                <a href="/add"><button class="btn btn-primary pt-2 pb-2">Add link</button></a>
+                <a href="https://www.youtube.com/results?search_query=<%=value%>"><button
+                        class="btn btn-primary pt-2 pb-2">Search on youtube</button></a>
+                <a href="https://www.google.com/search?q=<%=value%>"><button class="btn btn-primary pt-2 pb-2">Search on
+                        google</button></a>
             </div>
         </div>
-    <script>
-        function search() {
-            let search = document.getElementById('search');
-            let value = search.value;
-            fetch('/search/' + value, { method: 'GET' }).then(res =>{
+        <script>
+            function search() {
+                let search = document.getElementById('search');
+                let value = search.value;
+                fetch('/search/' + value, { method: 'GET' }).then(res => {
                     window.location.href = "http://localhost:3000/search/" + value
-            })
-    }
-</script>
+                })
+            }
+        </script>
 </body>
 
 </html>

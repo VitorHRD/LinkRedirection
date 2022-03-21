@@ -19,7 +19,7 @@
     .inputS {
         padding: 8px;
         max-height: 50px;
-       
+
 
         box-shadow: none;
     }
@@ -41,15 +41,16 @@
 <body>
 
     <div class="container">
-        <h1><a href="/" class="text-dark text-decoration-none"  >Links</a></h1>
+        <h1><a href="/" class="text-dark text-decoration-none">Links</a></h1>
         <a class="text-decoration-none d-block  " href="/add">Add Link</a>
         <div class="mb-2 mt-1 d-flex justify-content-between align-items-center">
             <div>
-                <a id="aclick"href="/"><button class="btn btn-primary" id="clicks" onclick="click()"> filter by date</button></a>
+                <a id="aclick" href="/"><button class="btn btn-primary" id="clicks" onclick="click()"> filter by
+                        date</button></a>
             </div>
-             <div class="d-flex align-items-center ">
-            <input id="search" class=" inputS" name="search" type="text">
-            <button id="botao" class="btn" onclick="search()">🔍</button>
+            <div class="d-flex align-items-center ">
+                <input id="search" class=" inputS" name="search" type="text">
+                <button id="botao" class="btn" onclick="search()">🔍</button>
             </div>
 
         </div>
@@ -109,15 +110,15 @@
         function search() {
             let search = document.getElementById('search');
             let value = search.value;
-            fetch('/search/' + value, { method: 'GET' }).then(res =>{
-                    window.location.href = "http://localhost:3000/search/" + value
-        })
-    }
-    function click(){
-            fetch('/click' , { method: 'GET' }).then(res =>{
-        })
+            fetch('/search/' + value, { method: 'GET' }).then(res => {
+                window.location.href = "http://localhost:3000/search/" + value
+            })
         }
-        
+        function click() {
+            fetch('/click', { method: 'GET' }).then(res => {
+            })
+        }
+
 
     </script>
 </body>
