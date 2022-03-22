@@ -67,7 +67,7 @@
                 let search = document.getElementById('search');
                 let value = search.value;
                 fetch('/search/' + value, { method: 'GET' }).then(res => {
-                    window.location.href = "http://localhost:3000/search/" + value
+                    window.location.href = "https://link-redirection.herokuapp.com/search/" + value
                 })
             }
         </script>
