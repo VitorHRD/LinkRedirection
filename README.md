@@ -23,13 +23,13 @@
             <li> ejs
               <li>Mongo DB
                 <li> mongoose
+                  <li>Mongo Atlas
  </ul>
  <h1>🚀 Dependências</h1>
           <li> Node Express
             <li> ejs
               <li>Mongo DB
                 <li> mongoose
-                  <li>Mongo Atlas
                    <li> extenção EJS language support
  
 <h1 > 🚀 Status do Projeto </h1>
