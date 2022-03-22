@@ -29,7 +29,8 @@
             <li> ejs
               <li>Mongo DB
                 <li> mongoose
-                 <li> extenção EJS language support
+                  <li>Mongo Atlas
+                   <li> extenção EJS language support
  
 <h1 > 🚀 Status do Projeto </h1>
  
