@@ -3,8 +3,10 @@ const app = express();
 const mongoose = require('mongoose');
 const LinkRoute = require('./routes/linkRoute');
 const path = require('path');
+const cors = require('cors')
 const PORT = process.env.PORT || 5000
 
+app.use(cors())
 app.use('/', express.static(path.join(__dirname, 'public')))
 app.use('/', LinkRoute);
 
