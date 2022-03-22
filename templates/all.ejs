@@ -66,7 +66,7 @@
                             <%=links[i].description%>
                         </h6>
                         <div><a class=" text-muted text-decoration-none"
-                                href="http://localhost:3000/<%=links[i].title%> ">
+                                href="http://localhost:5000/<%=links[i].title%> ">
                                 <%=links[i].url%>
                             </a></div>
                         <div class="text-info d-flex align-items-center">
@@ -111,7 +111,7 @@
             let search = document.getElementById('search');
             let value = search.value;
             fetch('/search/' + value, { method: 'GET' }).then(res => {
-                window.location.href = "http://localhost:3000/search/" + value
+                window.location.href = "http://localhost:5000/search/" + value
             })
         }
         function click() {

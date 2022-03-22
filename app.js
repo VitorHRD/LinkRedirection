@@ -9,7 +9,7 @@ app.use('/', express.static(path.join(__dirname, 'public')))
 app.use('/', LinkRoute);
 
 
-mongoose.connect(process.env.MONGO_CONNECTION_URL, (error)=>{
+mongoose.connect(process.env.MONGO_CONNECTION_URL , (error)=>{
     if(error){
         console.log(error);
     }

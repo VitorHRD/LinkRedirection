@@ -10,7 +10,7 @@ router.get('/edit/:id', linkController.loadLink);
 router.get('/click' , linkController.clickRedirect);
 router.get('/:title', linkController.redirect );
 
-
+router.delete("/:id",linkController.deleteLink)
 router.post('/', express.urlencoded({extended:true}),linkController.addLink);
 router.post('/edit/:id',express.urlencoded({extended:true}), linkController.editLink)
 
