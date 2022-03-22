@@ -1,25 +1,25 @@
 const express = require('express');
 const app = express();
-const port = 3000;
 const mongoose = require('mongoose');
 const LinkRoute = require('./routes/linkRoute');
 const path = require('path');
+const PORT = process.env.PORT || 5000
 
-app.use('/', express.static(path.join(__dirname,'public')))
-app.use('/',LinkRoute);
+app.use('/', express.static(path.join(__dirname, 'public')))
+app.use('/', LinkRoute);
 
 
-mongoose.connect("mongodb://localhost/newlinks",  (error , db)=>{
+mongoose.connect(process.env.MONGO_CONNECTION_URL, (error)=>{
     if(error){
         console.log(error);
     }
-    if(db){
-        console.log("conexão com com o banco de dados feita com sucesso");
-    }
+       else{
+           console.log('Mongo Connected');
+       }
     })
-    app.set('view engine' ,'ejs');
-    app.set('views',path.join(__dirname,'templates'));
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'templates'));
 
 
 
-app.listen(port , ()=> console.log("servidor rodando na porta " + port));
+app.listen(PORT, () => console.log("servidor rodando na porta " + PORT));
