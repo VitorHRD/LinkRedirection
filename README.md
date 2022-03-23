@@ -1,6 +1,7 @@
 
 <h1 align="center" >Redirecionador de links<h1>
 <h2 align="center">Projeto criado para estudo de node  js e mongo DB . </h2>
+    <h2 align="center"><a href="https://link-redirection.herokuapp.com/">🔗 Site</a></h2>
 <h1>🚀 Features</h1>
 <ul>
     <li> Cria uma url que passa por um Domínio especifico antes de ser direcionado para a própia.
@@ -22,13 +23,14 @@
             <li> ejs
               <li>Mongo DB
                 <li> mongoose
+                  <li>Mongo Atlas
  </ul>
  <h1>🚀 Dependências</h1>
           <li> Node Express
             <li> ejs
               <li>Mongo DB
                 <li> mongoose
-                 <li> extenção EJS language support
+                   <li> extenção EJS language support
  
 <h1 > 🚀 Status do Projeto </h1>
  
