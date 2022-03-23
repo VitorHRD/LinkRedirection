@@ -36,6 +36,12 @@
         background-color: rgba(0, 0, 0, 0.808);
         color: white;
     }
+    #link{
+        opacity: 0.7;
+    }
+    #link:hover{
+        opacity: 1;
+    }
 </style>
 
 <body>
@@ -65,7 +71,7 @@
                         <h6>
                             <%=links[i].description%>
                         </h6>
-                        <div><a class=" text-muted text-decoration-none"
+                        <div><a id="link" class=" text-muted text-decoration-none"
                                 href="https://link-redirection.herokuapp.com/<%=links[i].title%> ">
                                 https://link-redirection.herokuapp.com/<%=links[i].title%>
                             </a></div>
